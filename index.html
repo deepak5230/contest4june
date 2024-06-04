@@ -1,0 +1,202 @@
+<!--!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json data</title>
+    <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+h2 {
+ 
+   color:#dddddd;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e2e2e2;
+}
+      </style>
+      </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+   <h2>Student Portal</h2>
+
+<input type="text" id="search" placeholder="Search..">
+    
+<button>Search</button>
+</br>
+
+<button onclick="sortData('AZ')">Sort A-Z</button>
+        <button onclick="sortData('ZA')">Sort Z-A</button>
+        <button onclick="sortData('marks')">Sort by Marks</button>
+        <button onclick="sortData('passing')">Sort by Passing</button>
+        <button onclick="sortData('class')">Sort by Class</button>
+        <button onclick="sortData('gender')">Sort by Gender</button>
+<table class="table">
+    <thead class="table-dark">
+  <tr>
+    <th>first_name</th>
+    <th>last_name</th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Class</th>
+    <th>Marks</th>
+    <th>Passing</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody id="table_body">
+    </tbody>
+
+</table>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html> --> //////
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .gender-tables {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Management</h1>
+    <input type="text" id="search" placeholder="Search by name or email">
+    <div class="buttons">
+        <button onclick="sortData('AZ')">Sort A-Z</button>
+        <button onclick="sortData('ZA')">Sort Z-A</button>
+        <button onclick="sortData('marks')">Sort by Marks</button>
+        <button onclick="sortData('passing')">Sort by Passing</button>
+        <button onclick="sortData('class')">Sort by Class</button>
+        <button onclick="sortData('gender')">Sort by Gender</button>
+    </div>
+    <div id="table-container">
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Marks</th>
+                    <th>Passing</th>
+                    <th>Class</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
